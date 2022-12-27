@@ -11,3 +11,8 @@ source $HOME/.cargo/env
 rustup override set nightly
 (rustup component add rust-src --toolchain nightly-aarch64-unknown-linux-gnu)
 cargo build
+cargo install bootimage
+rustup component add llvm-tools-preview
+cargo bootimage
+
+qemu-system-x86_64 -drive format=raw,file=target/target/debug/bootimage-os_in_rust.bin
