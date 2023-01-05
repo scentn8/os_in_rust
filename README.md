@@ -9,6 +9,7 @@ apt install git<br>
 apt install build-essential<br>
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh<br>
 source $HOME/.cargo/env<br>
+<!-- 開発時に便利なツールをコンポーネントとして追加 -->
 rustup component add rls rust-src rust-analysis
 rustup override set nightly<br>
 rustup component add rust-src --toolchain nightly-aarch64-unknown-linux-gnu<br>
@@ -26,3 +27,5 @@ cargo upgrade <パッケージ名>
 cargo rm <パッケージ名>
 rustup component add rustfmt
 cargo fmt
+
+https://os.phil-opp.com/ja/vga-text-mode/
